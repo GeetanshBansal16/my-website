@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geetansh Bansal - Portfolio</title>
+<style>
+/* === Embedded CSS === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #f39c12;
+}
+header h1 { margin: 0; }
+header p { margin: 0.5rem 0; font-size: 1.1rem; }
+header .links a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 10px 20px;
+  background: #f39c12;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+h2 {
+  border-bottom: 2px solid #f39c12;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card h3 { margin-top: 0; }
+.card a { color: #f39c12; font-weight: bold; text-decoration: none; }
+footer {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="profile.jpg" alt="Profile Photo">
+  <h1>Geetansh Bansal</h1>
+  <p>B.Tech in Mathematics & Computing @ IIT Delhi | Machine Learning & AI Enthusiast</p>
+  <div class="links">
+    <a href="resume.pdf" target="_blank">Download Resume</a>
+  </div>
+</header>
+
+<section class="container" id="about">
+  <h2>About Me</h2>
+  <p>I am a Mathematics & Computing undergraduate at IIT Delhi (CGPA: 9.22, Dept. Rank 17) passionate about
+     Machine Learning, Computer Vision, LLM applications, and algorithmic problem solving. I’ve excelled in national
+     science olympiads and have hands-on experience through internships and self-driven projects.</p>
+</section>
+
+<section class="container" id="education">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>B.Tech in Mathematics & Computing</strong> - IIT Delhi | CGPA: 9.22</li>
+    <li><strong>CBSE Class XII</strong> - Lala Lajpat Rai Intl School | 97%</li>
+    <li><strong>CBSE Class X</strong> - Lala Lajpat Rai Intl School | 98.4%</li>
+  </ul>
+</section>
+
+<section class="container" id="achievements">
+  <h2>Scholastic Achievements</h2>
+  <ul>
+    <li>National top 1% - NSEP, NSEA, NSEJS</li>
+    <li>State top 1% - NSEC</li>
+    <li>Qualified - IOQM</li>
+    <li>JEE Mains Rank: 276</li>
+  </ul>
+</section>
+
+<section class="container" id="internships">
+  <h2>Internships</h2>
+  <div class="card">
+    <h3>Machine Learning Intern - Bhaasha (Feb 2025 - Apr 2025)</h3>
+    <p>Developed LLM-based OCR and legal translation pipelines using Gemini APIs, OpenCV, and custom validation schemas, preserving document layouts and enabling bidirectional semantic checks.</p>
+  </div>
+</section>
+
+<section class="container" id="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <div class="card">
+      <h3>Convex Separator Problem</h3>
+      <p>Research on separating convex sets using k-hyperplanes, aiming to improve existing methods.</p>
+    </div>
+    <div class="card">
+      <h3>Motion Comparison using LLMs & MediaPipe</h3>
+      <p>Tool to analyze biomechanical differences from videos using MediaPipe and Gemini API.</p>
+    </div>
+    <div class="card">
+      <h3>Computer Vision on CIFAR</h3>
+      <p>Built custom CNN achieving ~80% accuracy on CIFAR-10; experimented with ResNets, ViT.</p>
+    </div>
+    <div class="card">
+      <h3>Intelligent Note Maker</h3>
+      <p>Lecture recording & summarization tool using Streamlit, Google Speech API, and Gemini.</p>
+    </div>
+    <div class="card">
+      <h3>Time Series Forecasting</h3>
+      <p>Applied GRU, attention, and XGBoost to forecast from large multivariate datasets.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="skills">
+  <h2>Technical Skills</h2>
+  <p><strong>Machine Learning:</strong> PyTorch, CNNs, Attention, ViT, LLMs, RAG, RNNs, XGBoost<br>
+     <strong>Programming:</strong> Python, APIs, MediaPipe, OpenCV, Pandas, Streamlit, Qdrant, SentenceTransformers</p>
+</section>
+
+<section class="container" id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  <p>
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2025 Geetansh Bansal</p>
+</footer>
+
+<script>
+// === Embedded JS ===
+console.log("Portfolio loaded successfully!");
+</script>
+
+</body>
+</html>
