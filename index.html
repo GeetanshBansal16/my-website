@@ -124,6 +124,40 @@ header .subtitle {
   opacity: 0.8;
 }
 
+/* === Contact Links in Header === */
+.header-contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.header-contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 80px;
+}
+
+.header-contact-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.header-contact-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-contact-text {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 /* === About Section === */
 .about-content {
   display: grid;
@@ -317,43 +351,6 @@ header .subtitle {
   flex-shrink: 0;
 }
 
-/* === Contact Section === */
-.contact-section {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.contact-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #2c3e50;
-  transition: transform 0.3s ease, color 0.3s ease;
-  width: 100px;
-}
-
-.contact-link:hover {
-  transform: translateY(-5px);
-  color: #3498db;
-}
-
-.contact-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
 /* === Footer === */
 footer {
   background: #2c3e50;
@@ -387,6 +384,14 @@ footer {
     gap: 1rem;
   }
   
+  .header-contact-links {
+    gap: 1rem;
+  }
+  
+  .header-contact-link {
+    width: 70px;
+  }
+  
   .education-timeline::before {
     left: 25px;
   }
@@ -405,10 +410,6 @@ footer {
     flex-direction: column;
     gap: 0.3rem;
   }
-  
-  .contact-links {
-    gap: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -425,9 +426,20 @@ footer {
     font-size: 1.5rem;
   }
   
-  .contact-links {
-    flex-direction: column;
-    align-items: center;
+  .header-contact-links {
+    gap: 0.8rem;
+  }
+  
+  .header-contact-link {
+    width: 60px;
+  }
+  
+  .header-contact-icon {
+    font-size: 1.5rem;
+  }
+  
+  .header-contact-text {
+    font-size: 0.75rem;
   }
 }
 </style>
@@ -441,6 +453,30 @@ footer {
     </div>
     <h1>Geetansh Bansal</h1>
     <p class="subtitle">B.Tech in Mathematics & Computing @ IIT Delhi | Machine Learning & AI Enthusiast</p>
+    
+    <!-- Contact links moved here, below the photo -->
+    <div class="header-contact-links">
+      <a href="mailto:geetanshbansal.iitd@gmail.com" class="header-contact-link">
+        <div class="header-contact-icon">📧</div>
+        <span class="header-contact-text">Gmail</span>
+      </a>
+      <a href="mailto:mt1240079@iitd.ac.in" class="header-contact-link">
+        <div class="header-contact-icon">📨</div>
+        <span class="header-contact-text">Webmail</span>
+      </a>
+      <a href="https://www.linkedin.com/in/geetansh-bansal-84186720b" class="header-contact-link" target="_blank">
+        <div class="header-contact-icon">💼</div>
+        <span class="header-contact-text">LinkedIn</span>
+      </a>
+      <a href="https://github.com/GeetanshBansal16" class="header-contact-link" target="_blank">
+        <div class="header-contact-icon">💻</div>
+        <span class="header-contact-text">GitHub</span>
+      </a>
+      <a href="https://raw.githubusercontent.com/GeetanshBansal16/my-website/main/resume.pdf" class="header-contact-link" target="_blank">
+        <div class="header-contact-icon">📄</div>
+        <span class="header-contact-text">Resume</span>
+      </a>
+    </div>
     
     <div class="contact-info">
       <div class="contact-item">
@@ -667,35 +703,6 @@ footer {
           <h3>Mathematics Olympiad</h3>
           <p>Qualified Indian Olympiad Qualifier in Mathematics (IOQM)</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-section">
-      <p>Feel free to reach out to me through any of these platforms:</p>
-      <div class="contact-links">
-        <a href="mailto:geetanshbansal.iitd@gmail.com" class="contact-link">
-          <div class="contact-icon">📧</div>
-          <span>Gmail</span>
-        </a>
-        <a href="mailto:mt1240079@iitd.ac.in" class="contact-link">
-          <div class="contact-icon">📨</div>
-          <span>Webmail</span>
-        </a>
-        <a href="https://www.linkedin.com/in/geetansh-bansal-84186720b" class="contact-link" target="_blank">
-          <div class="contact-icon">💼</div>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/GeetanshBansal16" class="contact-link" target="_blank">
-          <div class="contact-icon">💻</div>
-          <span>GitHub</span>
-        </a>
-        <a href="https://raw.githubusercontent.com/GeetanshBansal16/my-website/main/resume.pdf" class="contact-link" target="_blank">
-          <div class="contact-icon">📄</div>
-          <span>Resume</span>
-        </a>
       </div>
     </div>
   </section>
