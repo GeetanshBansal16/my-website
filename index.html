@@ -79,8 +79,13 @@ header::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  color: #3498db;
+  overflow: hidden;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 header h1 {
@@ -107,6 +112,16 @@ header .subtitle {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.contact-item a:hover {
+  opacity: 0.8;
 }
 
 /* === About Section === */
@@ -251,6 +266,19 @@ header .subtitle {
   margin-bottom: 1rem;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #2980b9;
+}
+
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
@@ -350,7 +378,6 @@ footer {
   .profile-img {
     width: 120px;
     height: 120px;
-    font-size: 3rem;
   }
   
   h2 {
@@ -364,8 +391,7 @@ footer {
 <header>
   <div class="container header-content">
     <div class="profile-img">
-      <!-- Placeholder for profile image -->
-      GB
+      <img src="https://raw.githubusercontent.com/GeetanshBansal16/GeetanshBansal16/main/profile.jpg" alt="Geetansh Bansal">
     </div>
     <h1>Geetansh Bansal</h1>
     <p class="subtitle">B.Tech in Mathematics & Computing @ IIT Delhi | Machine Learning & AI Enthusiast</p>
@@ -377,11 +403,11 @@ footer {
       </div>
       <div class="contact-item">
         <span>✉️</span>
-        <span>mt1240079@iitd.ac.in</span>
+        <a href="mailto:geetanshbansal.iitd@gmail.com">geetanshbansal.iitd@gmail.com</a>
       </div>
       <div class="contact-item">
         <span>📍</span>
-        <span>Georgetown, Ontario / New Delhi, India</span>
+        <span>New Delhi, India</span>
       </div>
     </div>
   </div>
@@ -395,7 +421,7 @@ footer {
         <p>I am a Mathematics & Computing undergraduate at IIT Delhi with a strong academic record (CGPA: 9.22, Department Rank: 22). My passion lies in the intersection of mathematics, computer science, and artificial intelligence, with particular expertise in machine learning, computer vision, and natural language processing. I have demonstrated excellence through national-level academic achievements and hands-on technical projects.</p>
       </div>
       <div class="about-paragraph">
-        <p>My experience spans internships at organizations like ITC and Bhaasha, where I've developed practical solutions using cutting-edge technologies. I've consistently excelled in competitive environments, achieving top ranks in national examinations and olympiads. I'm now seeking opportunities to apply my skills to challenging problems in machine learning and AI research, with a particular interest in computer vision applications and large language models.</p>
+        <p>My experience spans working with organizations like ITC and Bhaasha, where I've developed practical solutions using cutting-edge technologies. I've consistently excelled in competitive environments, achieving top ranks in national examinations and olympiads. I'm now seeking opportunities to apply my skills to challenging problems in machine learning and AI research, with a particular interest in computer vision applications and large language models.</p>
       </div>
     </div>
   </section>
@@ -494,6 +520,7 @@ footer {
         </div>
         <div class="project-content">
           <p>Developed a motion analysis tool using MediaPipe to extract 3D joint coordinates from videos across 33 body landmarks. Utilized Gemini 2.0 Flash API to generate summaries of subject's motion and joint coordination. Designed a comparative prompt to the LLM to identify key biomechanical differences, suggest potential causes (e.g., stiffness, aggression), and assess physical condition. Employed OpenCV for video I/O and frame handling, with JSON for storing landmark time-series data.</p>
+          <a href="https://sites.google.com/view/motion-comparison/home" class="project-link" target="_blank">View Project Details →</a>
           <div class="tech-tags">
             <span class="tech-tag">MediaPipe</span>
             <span class="tech-tag">LLMs</span>
@@ -603,9 +630,11 @@ footer {
   <div class="container">
     <p>Connect with me</p>
     <div class="footer-links">
-      <a href="mailto:mt1240079@iitd.ac.in">Email</a>
-      <a href="https://linkedin.com/in/geetansh-bansal-84186720b" target="_blank">LinkedIn</a>
-      <a href="resume.pdf" target="_blank">Download Resume</a>
+      <a href="mailto:geetanshbansal.iitd@gmail.com">Email</a>
+      <a href="mailto:mt1240079@iitd.ac.in">Webmail</a>
+      <a href="https://www.linkedin.com/in/geetansh-bansal-84186720b" target="_blank">LinkedIn</a>
+      <a href="https://github.com/GeetanshBansal16" target="_blank">GitHub</a>
+      <a href="https://raw.githubusercontent.com/GeetanshBansal16/GeetanshBansal16/main/resume.pdf" target="_blank">Download Resume</a>
     </div>
     <p>© 2025 Geetansh Bansal. All rights reserved.</p>
   </div>
