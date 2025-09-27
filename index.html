@@ -104,8 +104,8 @@ header .subtitle {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .contact-item {
@@ -117,7 +117,6 @@ header .subtitle {
 .contact-item a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
   transition: opacity 0.3s ease;
 }
 
@@ -318,6 +317,43 @@ header .subtitle {
   flex-shrink: 0;
 }
 
+/* === Contact Section === */
+.contact-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.3s ease, color 0.3s ease;
+  width: 100px;
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+  color: #3498db;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
 /* === Footer === */
 footer {
   background: #2c3e50;
@@ -327,11 +363,28 @@ footer {
   margin-top: 3rem;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ecf0f1;
+}
+
 /* === Responsive Design === */
 @media (max-width: 768px) {
   .contact-info {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   
   .education-timeline::before {
@@ -352,6 +405,10 @@ footer {
     flex-direction: column;
     gap: 0.3rem;
   }
+  
+  .contact-links {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -367,6 +424,11 @@ footer {
   h2 {
     font-size: 1.5rem;
   }
+  
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>
 </head>
@@ -377,41 +439,278 @@ footer {
     <div class="profile-img">
       <img src="https://raw.githubusercontent.com/GeetanshBansal16/my-website/main/profile.jpg" alt="Geetansh Bansal">
     </div>
-
-    <div class="contact-info">
-      <div class="contact-item">
-        <span>✉️</span>
-        <a href="mailto:geetanshbansal.iitd@gmail.com">Email</a>
-      </div>
-      <div class="contact-item">
-        <span>📧</span>
-        <a href="mailto:mt1240079@iitd.ac.in">Webmail</a>
-      </div>
-      <div class="contact-item">
-        <span>🔗</span>
-        <a href="https://www.linkedin.com/in/geetansh-bansal-84186720b" target="_blank">LinkedIn</a>
-      </div>
-      <div class="contact-item">
-        <span>🐙</span>
-        <a href="https://github.com/GeetanshBansal16" target="_blank">GitHub</a>
-      </div>
-      <div class="contact-item">
-        <span>📄</span>
-        <a href="https://raw.githubusercontent.com/GeetanshBansal16/my-website/main/resume.pdf" target="_blank">Resume</a>
-      </div>
-    </div>
-
     <h1>Geetansh Bansal</h1>
     <p class="subtitle">B.Tech in Mathematics & Computing @ IIT Delhi | Machine Learning & AI Enthusiast</p>
+    
+    <div class="contact-info">
+      <div class="contact-item">
+        <span>📱</span>
+        <span>+918699325531</span>
+      </div>
+      <div class="contact-item">
+        <span>✉️</span>
+        <a href="mailto:geetanshbansal.iitd@gmail.com">geetanshbansal.iitd@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span>📍</span>
+        <span>New Delhi, India</span>
+      </div>
+    </div>
   </div>
 </header>
 
 <main class="container">
-  <!-- About, Interests, Education, Projects, Achievements sections remain the same -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-paragraph">
+        <p>I am a Mathematics & Computing undergraduate at IIT Delhi with a strong academic record (CGPA: 9.22, Department Rank: 22). My passion lies in the intersection of mathematics, computer science, and artificial intelligence, with particular expertise in machine learning, computer vision, and natural language processing. I have demonstrated excellence through national-level academic achievements and hands-on technical projects.</p>
+      </div>
+      <div class="about-paragraph">
+        <p>My experience spans working with organizations like ITC and Bhaasha, where I've developed practical solutions using cutting-edge technologies. I've consistently excelled in competitive environments, achieving top ranks in national examinations and olympiads. I'm now seeking opportunities to apply my skills to challenging problems in machine learning and AI research, with a particular interest in computer vision applications and large language models.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <h2>Interests</h2>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <div class="interest-icon">🧠</div>
+        <h3>Machine Learning</h3>
+        <p>Deep learning, computer vision, NLP, and algorithmic optimization</p>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">👁️</div>
+        <h3>Computer Vision</h3>
+        <p>Image segmentation, object detection, and video analysis</p>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">📊</div>
+        <h3>Data Science</h3>
+        <p>Statistical analysis, forecasting, and data-driven insights</p>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">⚡</div>
+        <h3>Algorithm Design</h3>
+        <p>Optimization, problem-solving, and efficient computation</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-timeline">
+      <div class="education-item">
+        <div class="education-icon">🎓</div>
+        <div class="education-content">
+          <div class="education-meta">
+            <span>2022 - Present</span>
+            <span>CGPA: 9.22</span>
+          </div>
+          <h3>B.Tech in Mathematics & Computing</h3>
+          <p>Indian Institute of Technology Delhi</p>
+          <p>Department Rank: 22</p>
+        </div>
+      </div>
+      
+      <div class="education-item">
+        <div class="education-icon">🏫</div>
+        <div class="education-content">
+          <div class="education-meta">
+            <span>2022</span>
+            <span>Percentage: 98.4%</span>
+          </div>
+          <h3>Class XII - CBSE</h3>
+          <p>Lala Lajpat Rai International School</p>
+        </div>
+      </div>
+      
+      <div class="education-item">
+        <div class="education-icon">🏫</div>
+        <div class="education-content">
+          <div class="education-meta">
+            <span>2020</span>
+            <span>Percentage: 97%</span>
+          </div>
+          <h3>Class X - CBSE</h3>
+          <p>Lala Lajpat Rai International School</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Recent Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Wood Logs Segmentation</h3>
+          <div class="project-meta">ITC | July 2025 - Present</div>
+        </div>
+        <div class="project-content">
+          <p>Developed a computer vision system to segment approximately 700 logs per image and estimate diameter distribution for quality control. Implemented initial approaches using K-Means clustering, HSV color separation, contour detection, and Hough Transform. Transitioned to a deep learning approach using YOLO-v11-seg with fine-tuning for improved accuracy in log detection and segmentation. Incorporated truck detection and variance separation techniques to enhance segmentation performance and diameter estimation.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Computer Vision</span>
+            <span class="tech-tag">YOLO</span>
+            <span class="tech-tag">Image Segmentation</span>
+            <span class="tech-tag">Deep Learning</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Motion Comparison using LLMs & MediaPipe</h3>
+          <div class="project-meta">Prof. Rajesh Khanna | April 2025 - May 2025</div>
+        </div>
+        <div class="project-content">
+          <p>Developed a motion analysis tool using MediaPipe to extract 3D joint coordinates from videos across 33 body landmarks. Utilized Gemini 2.0 Flash API to generate summaries of subject's motion and joint coordination. Designed a comparative prompt to the LLM to identify key biomechanical differences, suggest potential causes (e.g., stiffness, aggression), and assess physical condition. Employed OpenCV for video I/O and frame handling, with JSON for storing landmark time-series data.</p>
+          <a href="https://sites.google.com/view/motion-comparison/home" class="project-link" target="_blank">View Project Details →</a>
+          <div class="tech-tags">
+            <span class="tech-tag">MediaPipe</span>
+            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">Biomechanics</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Bhaasha - Document Processing Pipeline</h3>
+          <div class="project-meta">Machine Learning Intern | February 2025 - April 2025</div>
+        </div>
+        <div class="project-content">
+          <p>Developed a pipeline using LLMs (Gemini APIs) for OCR, layout reconstruction, and legal translation of regional-language documents. Designed system prompts to generate HTML+JSON structured outputs from image and OCR data. Built an LLM-based validation agent to compare rendered HTML with original images and provide correction feedback via a custom validationSchema. Enabled bidirectional feedback by back-translating outputs into regional languages to detect semantic drift. Utilized OpenCV for pre-processing, LangDetect, ReportLab for PDF generation, and custom JSON schemas with token-budgeted async chunking for efficient processing.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">OCR</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">OpenCV</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Computer Vision on CIFAR Dataset</h3>
+          <div class="project-meta">May 2025 - June 2025</div>
+        </div>
+        <div class="project-content">
+          <p>Evaluated various image classification methods including CNNs, Attention mechanisms, ResNets, KNN, and Vision Transformers (VIT). Designed a custom 5-layer CNN architecture with dropout, batch normalization, and ReLU non-linearities. Systematically tuned hyperparameters such as learning rate, optimizer (Adam vs SGD), batch size, and regularization. Achieved 80% accuracy on the CIFAR-10 dataset through systematic experimentation and model optimization.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">Vision Transformers</span>
+            <span class="tech-tag">Image Classification</span>
+            <span class="tech-tag">Deep Learning</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Intelligent Note Maker</h3>
+          <div class="project-meta">January 2025</div>
+        </div>
+        <div class="project-content">
+          <p>Built an audio-driven classroom companion using Streamlit with CSS UI, allowing users to record lectures and generate notes. Integrated PyAudio for recording, SpeechRecognition (Google API) for audio-to-text transcription. Deployed Gemini 2.0 Flash via Google GenerativeAI to summarize transcripts into readable, structured lecture notes. Utilized SentenceTransformers and querying top relevant chunks from Qdrant (In-memory vector DB) for efficient information retrieval and summarization.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Speech Recognition</span>
+            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">Vector Databases</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Scholastic Achievements</h2>
+    <div class="achievements-grid">
+      <div class="achievement-card">
+        <div class="achievement-icon">🏆</div>
+        <div>
+          <h3>National Top 1%</h3>
+          <p>National Standard Examination in Physics (NSEP), Astronomy (NSEA), and Junior Science (NSEJS)</p>
+        </div>
+      </div>
+      
+      <div class="achievement-card">
+        <div class="achievement-icon">🥇</div>
+        <div>
+          <h3>State Top 1%</h3>
+          <p>National Standard Examination in Chemistry (NSEC)</p>
+        </div>
+      </div>
+      
+      <div class="achievement-card">
+        <div class="achievement-icon">📈</div>
+        <div>
+          <h3>JEE Advanced Rank</h3>
+          <p>All India Rank 282</p>
+        </div>
+      </div>
+      
+      <div class="achievement-card">
+        <div class="achievement-icon">📊</div>
+        <div>
+          <h3>JEE Mains Rank</h3>
+          <p>All India Rank 276</p>
+        </div>
+      </div>
+      
+      <div class="achievement-card">
+        <div class="achievement-icon">🔬</div>
+        <div>
+          <h3>Mathematics Olympiad</h3>
+          <p>Qualified Indian Olympiad Qualifier in Mathematics (IOQM)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-section">
+      <p>Feel free to reach out to me through any of these platforms:</p>
+      <div class="contact-links">
+        <a href="mailto:geetanshbansal.iitd@gmail.com" class="contact-link">
+          <div class="contact-icon">📧</div>
+          <span>Gmail</span>
+        </a>
+        <a href="mailto:mt1240079@iitd.ac.in" class="contact-link">
+          <div class="contact-icon">📨</div>
+          <span>Webmail</span>
+        </a>
+        <a href="https://www.linkedin.com/in/geetansh-bansal-84186720b" class="contact-link" target="_blank">
+          <div class="contact-icon">💼</div>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/GeetanshBansal16" class="contact-link" target="_blank">
+          <div class="contact-icon">💻</div>
+          <span>GitHub</span>
+        </a>
+        <a href="https://raw.githubusercontent.com/GeetanshBansal16/my-website/main/resume.pdf" class="contact-link" target="_blank">
+          <div class="contact-icon">📄</div>
+          <span>Resume</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="container">
+    <p>Connect with me</p>
+    <div class="footer-links">
+      <a href="mailto:geetanshbansal.iitd@gmail.com">Email</a>
+      <a href="mailto:mt1240079@iitd.ac.in">Webmail</a>
+      <a href="https://www.linkedin.com/in/geetansh-bansal-84186720b" target="_blank">LinkedIn</a>
+      <a href="https://github.com/GeetanshBansal16" target="_blank">GitHub</a>
+      <a href="https://raw.githubusercontent.com/GeetanshBansal16/my-website/main/resume.pdf" target="_blank">Download Resume</a>
+    </div>
     <p>© 2025 Geetansh Bansal. All rights reserved.</p>
   </div>
 </footer>
@@ -419,7 +718,12 @@ footer {
 <script>
 // Simple script for animations
 document.addEventListener('DOMContentLoaded', function() {
-  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  // Add fade-in animation to sections as they come into view
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -428,7 +732,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }, observerOptions);
-
+  
+  // Apply to sections
   const sections = document.querySelectorAll('section');
   sections.forEach(section => {
     section.style.opacity = 0;
@@ -436,6 +741,8 @@ document.addEventListener('DOMContentLoaded', function() {
     section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(section);
   });
+  
+  console.log("Portfolio loaded successfully!");
 });
 </script>
 
